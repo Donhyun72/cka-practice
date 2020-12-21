@@ -49,7 +49,7 @@ kubectl taint nodes node1 app=blue:NoSchedule
 - Taint Effect : 이 Taint를 Tolerate하지 않는 POD에는 어떤 일이 벌어지는가?
 	- `NoSchedule` : POD는 이 노드에 스케줄링 되지 않을 것이다. 
 	- `PreferNoSchedule` :  시스템은 이 노드에 POD를 스케줄링을 하지 않으려고 노력하지만 반드시 보장하는 것은 아니다. 
-	- `NoExecute` : 이 노드에 POD를 스케줄링하지 않으며, 이미 실행중인 POD가 있는 경우 Evict 된다. 
+	- `NoExecute` : 이 노드에 POD를 스케줄링하지 않으며, 이미 실행중인 POD가 있는 경우 Evict(퇴거시키다/쫓아내다) 된다. 
 
 Taints와 Toleration은 POD가 어떤 노드로 스케줄링 될 지 결정하기 위해 사용하는 게 아니다.  
 노드가 자신에게 부여된 Taints를 Toleration하는 POD만을 허용하는 것이다.  
