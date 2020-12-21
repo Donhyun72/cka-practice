@@ -65,7 +65,7 @@ tolerations:
 ```
 
 ## Node Affinity
-Node Affinity(친하성) 기능의 목적은 POD를 특정 노드에 배치를 제한 하기 위함이다.  
+Node Affinity(친화성) 기능의 목적은 POD를 특정 노드에 배치를 제한 하기 위함이다.  
 
 - [노드에 파드 할당하기 | Kubernetes](https://kubernetes.io/ko/docs/concepts/scheduling-eviction/assign-pod-node/#%EC%96%B4%ED%94%BC%EB%8B%88%ED%8B%B0-affinity-%EC%99%80-%EC%95%88%ED%8B%B0-%EC%96%B4%ED%94%BC%EB%8B%88%ED%8B%B0-anti-affinity)
 - [Advanced Scheduling and Node Affinity - Scheduling | Cluster Administration | OpenShift Container Platform 3.6](https://docs.openshift.com/container-platform/3.6/admin_guide/scheduling/node_affinity.html)
