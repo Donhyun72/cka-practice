@@ -77,7 +77,7 @@ Taint와 Toleration은 POD가 어떤 노드만 선호한다고 보장하지는 �
 노드에 label을 지정하고, POD에 nodeSelector를 이용해서 해당 노드에 스케줄링 되도록 할 수 있다.
 하지만 이 노드에는 다른 POD도 스케줄링 될 수 있다.
 
-Taint와Toleration 그리고 NodeAffinity를 함께 사용하면 특정 POD만 스케줄링되는 전용 노드를 만들 수 있다.  
+Taint와 Toleration 그리고 Node Affinity를 함께 사용하면 특정 POD만 스케줄링되는 전용 노드를 만들 수 있다.  
 
 참고: [테인트(Taints)와 톨러레이션(Tolerations) | Kubernetes](https://kubernetes.io/ko/docs/concepts/scheduling-eviction/taint-and-toleration/)
 
