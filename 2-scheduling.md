@@ -36,7 +36,7 @@ $ kubectl get po -lenv=prod,bu=finance,tier=frontend
 ```
 
 ## Taint & Toleration
-Taints와 Toleration은 POD가 스케줄링 되는 것을 제한하는 목적으로 사용한다.  
+Taints(얼룩/감염)와 Toleration(허용/묵인)은 POD가 스케줄링 되는 것을 제한하는 목적으로 사용한다.  
 Taints는 노드에 설정하고, Toleration은 POD에 설정한다.  
 
 ```shell
