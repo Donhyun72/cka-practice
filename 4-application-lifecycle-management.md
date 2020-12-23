@@ -26,7 +26,7 @@ Deployment의 전략은 한번에 모든 것을 제거하는 것이 아니라 �
 
 
 ## Application Commands & Arguments
-EntryPont는 컨테이너가 시작될 때 실행될 프로그램 명령어와 명령 옵션을 지정하는 Commmand와 유사하다.   
+EntryPoint는 컨테이너가 시작될 때 실행될 프로그램 명령어와 명령 옵션을 지정하는 Commmand와 유사하다.   
 
 POD를 생성할 때, POD 안에서 동작하는 컨테이너를 위한 command와 args를 정의할 수 있다.   
 command를 정의하기 위해서는, POD 안에서 실행되는 컨테이너에 `command` 필드를 포함시킨다.   
