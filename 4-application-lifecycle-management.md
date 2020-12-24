@@ -174,7 +174,24 @@ volumes:
 ## Multiple containers
 POD는 여러 컨테이너를 포함해서 함께 생성되고 같은 생명 주기를 갖는다.  
 삭제될 때도 함께 삭제되고, 같은 네트워크와 같은 스토리지 볼륨에 접근할 수 있다.  
-
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: simple-webapp
+  labels:
+    app: simple-webapp
+spec:
+  containers:
+  - name: simple-webapp
+    image: simple-webapp
+    ports:
+    	- containerPort: 8080
+	
+  - name: log-agent
+    image: log-agent
+  
+```
 
 ## InitContainers
 POD의 컨테이너가 실행되기 전에 어떤 선행 과정을 수행해야 할 때가 있다.  
