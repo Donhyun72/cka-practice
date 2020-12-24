@@ -189,7 +189,6 @@ spec:
       - containerPort: 8080
   - name: log-agent
     image: log-agent
-  
 ```
 
 ## InitContainers
