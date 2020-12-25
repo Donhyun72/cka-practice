@@ -17,8 +17,10 @@ kubectl drain node01 --ignore-daemonsets --force
 ```
 
 ## Cluster upgrade process
-Kube API 서버는 컨트롤 플레인의 핵심 구성요소이며, 다른 구성 요소보다 Kube API 서버 버전이 높아야 한다.  
-Cotroller-manager와 Scheduler는 Kube API 버전보다 1개까지 낮아도 괜찮고, kubelet과 Kube Proxy는 2개 버전까지 낮아도 괜찮다.  
+Kube API 서버는 컨트롤 플레인의 핵심 구성요소이며,
+다른 구성 요소보다 **Kube API 서버**  버전이 높아야 한다.  
+Cotroller-manager와 Scheduler는 Kube API 버전보다 1개까지 낮아도 괜찮고, 
+kubelet과 Kube Proxy는 2개 버전까지 낮아도 괜찮다.  
 kubectl 은 Kube API 버전보다 1개 높거나 같아야 한다.   
 
 `kube-apiserver` 버전이 `v1.10`일 때...  
