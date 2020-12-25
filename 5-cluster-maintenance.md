@@ -53,7 +53,7 @@ apt-get upgrade -y kubelet=1.18.0-00
 systemctl restart kubelet
 ```
 
-- Worker Node Upgrade
+- Worker Node Upgrade   
 첫번째 방법은 모든 worker node를 내린 후 업그레이드 후에 다시 올린다. 다운타임이 존재한다.   
 두번째 방법은 하나의 노드에 있는 컨테이너를 다른 노드로 보낸 주, 업그레드할 노드를 내리고 업그레이드 후에 다시 올린다.
 세번재 방법은 업그레이드 된 새로운 노드를 만들고 거기에 컨테이너를 보낸다. 구 버전의 기존 노드는 폐기한다.
