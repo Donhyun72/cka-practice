@@ -10,7 +10,7 @@
 kubectl drain node01 --ignore-daemonsets
 ```
 
-만약 어떤 노드에 ReplicaSets의 일부가 아닌 단독으로 실행되는 POD가 있는데 해당 노드를 그냥 Drain하게 되면 그 POD는 자동으로 Evicted 되지 않는다.  
+만약 어떤 노드에 ReplicaSets의 일부가 아닌 단독으로 실행되는 POD가 있는데 해당 노드를 그냥 Drain하게 되면 그 POD는 자동으로 Evicted (evict : 퇴거시키다) 되지 않는다.  
 그래서 그 POD를 강제로 제거하기 위해 `--force` 옵션을 사용할 수 있다. 하지만 그러면 그 POD는 다른 노드에 스케줄링 되지 않고 영원히 사라지게 된다.  
 
 ## Cluster upgrade process
