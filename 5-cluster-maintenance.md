@@ -1,9 +1,9 @@
 ## OS Upgrades
 노드에 문제가 생겨서 해당 노드에 실행 중인 POD는 5분 안에(kube-controller-manger의 `--pod-eviction-timeout` 옵션에 따름) 정상화 되지 않을 경우 다른 노드에 스케줄링 된다.  
-안전하게 노드를 작업하기 위해서 `drain node`를 사용한다. 이 명령은 gracefully 하게 POD를 종료시키고 다른 노드에 POD를 재생성하게 한다.  
+안전하게 노드를 작업하기 위해서 `drain node` (drain: 배수)를 사용한다. 이 명령은 gracefully 하게 POD를 종료시키고 다른 노드에 POD를 재생성하게 한다.  
 그리고 해당 노드는 스케줄링 되지 않게 마킹된다.  (cordoned 상태)  
 노드 작업이 끝난 후 다시 클러스터의 워커 노드로 투입하기 위해 `uncordon` 명령을 사용한다. 하지만 예전에 이 노드에서 다른 노드로 재생성된 POD가 다시 자동으로 돌아오는 것은 아니다.   
-`drain` 명령어와 `uncordon` 명령어 외 `cordon`명령어는 스케줄링 하지 않는 다는 의미의 표시 목적으로 사용된다.   
+`drain` 명령어와 `uncordon` 명령어 외 `cordon`명령어(cordon : 장식리본)는 스케줄링 하지 않는 다는 의미의 표시 목적으로 사용된다.   
 단, `drain`과 다른 점은 이미 실행중인 POD를 종료 시키거나 다른 노드로 이주시키지 않는다. 단지 새로운 POD가 더이상 스케줄링 되지 않도록 처리한다.   
 
 ```shell
