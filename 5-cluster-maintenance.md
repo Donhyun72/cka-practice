@@ -78,7 +78,11 @@ kubeadm upgrade node config --kubelet-version v1.12.0
 systemctl restart kubelet
 ```
 
-모두 완료된 뒤 해당 노드에 `uncordon`으로 해당 노드에 다시 스케줄링이 될 수 있도록 설정한다. 
+모두 완료된 뒤 해당 노드에 `uncordon`으로 해당 노드에 다시 스케줄링이 될 수 있도록 설정한다.    
+```shell
+kubectl get nodes
+kubectl uncordon node01
+```
 
 
 ## Backup & Restore
