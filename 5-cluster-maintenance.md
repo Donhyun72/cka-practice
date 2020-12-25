@@ -41,7 +41,8 @@ apt-get upgrade -y kubeadm=1.18.0-00
 kubeadm upgrade apply v1.18.0
 ```
 
-위 작업까지 완료한 뒤 `kubectl get nodes` 명령어로 클러스터 버전을 확인해도 그대로인 것을 확인할 수 있다. 그 이유는 아직 kube-api에 저장된 내용이 업그레이드 되지 않은 `kubelet`버전이기 때문이다.  
+위 작업까지 완료한 뒤 `kubectl get nodes` 명령어로 클러스터 버전을 확인해도 그대로인 것을 확인할 수 있다.   
+그 이유는 아직 kube-api에 저장된 내용이 업그레이드 되지 않은 `kubelet`버전이기 때문이다.  
 
 - Kubelet Upgrade
 ```shell
@@ -53,6 +54,10 @@ systemctl restart kubelet
 ```
 
 - Worker Node Upgrade
+첫번째 방법은 모든 worker node를 내린 후 업그레이드 후에 다시 올린다. 다운타임이 존재한다.   
+두번째 방법은 하나의 노드에 있는 컨테이너를 다른 노드로 보낸 주, 업그레드할 노드를 내리고 업그레이드 후에 다시 올린다.
+세번재 방법은 업그레이드 된 새로운 노드를 만들고 거기에 컨테이너를 보낸다. 구 버전의 기존 노드는 폐기한다.
+
 워커 노드 하나씩 업그레이드를 진행한다.   
 먼저 `kubectl drain {{워커노드이름}}`을 실행해서 해당 노드에 실행되는 POD를 다른 노드로 이주시킨다.   
 그 다음 `kubectl cordon {{워커노드이름}}`을 실행해서 이 워커노드에 더이상 POD 스케줄되지 않도록 마킹한다.  
